@@ -5588,7 +5588,7 @@ div#mCSB_1_container{
   left: 0px;
   bottom: 0px;
   width: 100%;
-  background-color: #232323;
+  background-color: #0000008c;
   border-radius: 15px;
   height: 133px;
   overflow: hidden;
@@ -9257,7 +9257,7 @@ div#mCSB_1_container{
 
 .about-style-three{
   position: relative;
-  padding: 101px 0px 370px 0px;
+  padding: 101px 0px 40px 0px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9473,6 +9473,13 @@ div#mCSB_1_container{
 
 .about-style-three .content_block_6 .content-box{
   margin-right: 30px;
+}
+
+.image_block_3 .image-box .image{
+  float: right;
+  border-radius: 50%;
+  height: 50%;
+  max-width: 60%;
 }
 
 
