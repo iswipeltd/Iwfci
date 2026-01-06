@@ -9475,6 +9475,13 @@ div#mCSB_1_container{
   margin-right: 30px;
 }
 
+.image_block_3 .image-box .image{
+  float: right;
+  border-radius: 50%;
+  height: 50%;
+  max-width: 60%;
+}
+
 
 /** history-section **/
 
