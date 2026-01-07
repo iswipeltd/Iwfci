@@ -1,0 +1,2101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <title>Admin Dashboard</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link href="assets/css/font-awesome-all.css" rel="stylesheet" />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/owl.css" rel="stylesheet" />
+    <link href="assets/css/swiper.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/nice-select.css" rel="stylesheet" />
+    <link href="assets/css/color.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+  </head>
+
+  <!-- page wrapper -->
+  <body>
+    <div class="boxed_wrapper">
+      <!-- preloader -->
+      <div class="loader-wrap">
+        <div class="preloader">
+          <div class="preloader-close">x</div>
+          <div id="handle-preloader" class="handle-preloader">
+            <div class="animation-preloader">
+              <div class="spinner"></div>
+              <div class="txt-loading">
+                <span data-text-preloader="P" class="letters-loading"> P </span>
+                <span data-text-preloader="u" class="letters-loading"> u </span>
+                <span data-text-preloader="r" class="letters-loading"> r </span>
+                <span data-text-preloader="e" class="letters-loading"> e </span>
+                <span data-text-preloader="H" class="letters-loading"> H </span>
+                <span data-text-preloader="e" class="letters-loading"> e </span>
+                <span data-text-preloader="a" class="letters-loading"> a </span>
+                <span data-text-preloader="r" class="letters-loading"> r </span>
+                <span data-text-preloader="t" class="letters-loading"> t </span>
+                <span data-text-preloader="s" class="letters-loading"> s </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- preloader end -->
+
+      <!-- main header -->
+      <header class="main-header header-style-one">
+        <!-- logo-box -->
+        <div class="logo-box">
+          <div
+            class="shape"
+            style="background-image: url(assets/images/shape/shape-1.png)"
+          ></div>
+          <figure class="logo">
+            <a href="index.html"
+              ><img
+                src="assets/images/logo1.jpg"
+                alt=""
+                height="100%"
+                width="auto"
+            /></a>
+          </figure>
+        </div>
+        <!-- header-top -->
+        <div class="header-top">
+          <div class="outer-container">
+            <div class="top-inner clearfix">
+              <div class="left-column pull-left">
+                <ul class="info-list clearfix">
+                  <li>
+                    <i class="icon-chat"></i>
+                    <span>Admin:</span>
+                    <a href="#" id="adminWelcomeName">Not signed in</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="right-column pull-right">
+                <div class="update-news">
+                  <p>
+                    <i class="icon-megaphone"></i><span>Updates:</span> Manage
+                    Blog Posts and Events.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- donate-btn -->
+          <div class="donate-btn">
+            <button
+              id="adminLogoutBtn"
+              class="theme-btn btn-one"
+              style="display: none"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+        <!-- header-lower -->
+        <div class="header-lower">
+          <div class="outer-container">
+            <div class="outer-box">
+              <div class="text">
+                <figure class="icon-box">
+                  <img src="assets/images/icons/heart-1.png" alt="" />
+                </figure>
+                <span>Admin Area</span>
+              </div>
+              <div class="menu-area clearfix">
+                <!--Mobile Navigation Toggler-->
+                <div class="mobile-nav-toggler">
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
+                  <i class="icon-bar"></i>
+                </div>
+                <nav class="main-menu navbar-expand-md navbar-light">
+                  <div
+                    class="collapse navbar-collapse show clearfix"
+                    id="navbarSupportedContent"
+                  >
+                    <ul class="navigation clearfix">
+                      <li><a href="index.html">Home</a></li>
+                      <li class="current">
+                        <a href="admin page.html">Admin</a>
+                      </li>
+                      <li><a href="blog.html">Public Blog</a></li>
+                      <li><a href="events.html">Public Events</a></li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sticky header -->
+        <div class="sticky-header">
+          <div class="outer-container">
+            <div class="outer-box">
+              <div class="logo-box">
+                <figure class="logo">
+                  <a href="index.html"
+                    ><img src="assets/images/logo1.jpg" alt=""
+                  /></a>
+                </figure>
+              </div>
+              <div class="menu-area clearfix">
+                <nav class="main-menu clearfix"></nav>
+              </div>
+              <div class="nav-right">
+                <div class="support-box">
+                  <h6>Dashboard</h6>
+                  <h5>
+                    <a href="#" id="adminWelcomeNameSticky">Not signed in</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sticky-header end -->
+      </header>
+      <!-- main-header end -->
+
+      <!-- Mobile Menu  -->
+      <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+          <div class="nav-logo">
+            <a href="index.html"
+              ><img src="assets/images/logo1.jpg" alt="" title=""
+            /></a>
+          </div>
+          <div class="menu-outer">
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+          </div>
+          <div class="contact-info">
+            <h4>Admin</h4>
+            <ul>
+              <li>Manage blog posts and events</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- End Mobile Menu -->
+
+      <!-- Page Title -->
+      <section
+        class="page-title"
+        style="background-image: url(assets/images/background/12.jpg)"
+      >
+        <div class="auto-container">
+          <div class="content-box">
+            <div class="title">
+              <h1>Admin Dashboard</h1>
+            </div>
+            <ul class="bread-crumb clearfix">
+              <li><a href="index.html">Home</a></li>
+              <li>Admin</li>
+              <li>Dashboard</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End Page Title -->
+
+      <!-- Admin Alerts -->
+      <section style="padding-top: 30px">
+        <div class="auto-container">
+          <div
+            id="adminAlert"
+            class="alert"
+            style="display: none"
+            role="alert"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Login View -->
+      <section class="myaccount-section" id="adminLoginView">
+        <div class="auto-container">
+          <div class="row clearfix">
+            <div class="col-lg-7 col-md-12 col-sm-12 column">
+              <div class="login-inner">
+                <h3>Admin Login</h3>
+                <form class="login-form" id="adminLoginForm">
+                  <div class="form-group">
+                    <i class="fas fa-user"></i>
+                    <input
+                      type="text"
+                      name="username"
+                      id="adminUsername"
+                      placeholder="Username"
+                      required=""
+                      autocomplete="username"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-lock-open"></i>
+                    <input
+                      type="password"
+                      name="password"
+                      id="adminPassword"
+                      placeholder="Password"
+                      required=""
+                      autocomplete="current-password"
+                    />
+                  </div>
+                  <div class="form-group btn-box">
+                    <button type="submit" class="theme-btn btn-one">
+                      Login
+                    </button>
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-controls-stacked">
+                      <label class="custom-control material-checkbox">
+                        <input
+                          type="checkbox"
+                          class="material-control-input"
+                          id="adminRememberMe"
+                        />
+                        <span class="material-control-indicator"></span>
+                        <span class="description"
+                          >Remember me on this device</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </form>
+                <div class="text">
+                  <p>
+                    <span>*</span> Frontend demo login. Credentials are stored
+                    only in your browser session/local storage.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-12 col-sm-12 column">
+              <div class="register-inner">
+                <h3>What you can do</h3>
+                <form class="register-form">
+                  <div class="form-group">
+                    <i class="fas fa-check"></i>
+                    <input
+                      type="text"
+                      value="Create / Edit / Delete blog posts"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-check"></i>
+                    <input
+                      type="text"
+                      value="Create / Edit / Delete events"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group">
+                    <i class="fas fa-check"></i>
+                    <input
+                      type="text"
+                      value="Everything saves automatically (localStorage)"
+                      readonly
+                    />
+                  </div>
+                </form>
+                <div class="text">
+                  <p><span>*</span> No backend required.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dashboard View -->
+      <section
+        class="events-page-section"
+        id="adminAppView"
+        style="display: none"
+      >
+        <div class="auto-container">
+          <div class="row clearfix" style="margin-bottom: 20px">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card" style="margin-bottom: 20px">
+                <div class="card-body">
+                  <h5 class="card-title" style="margin-bottom: 10px">
+                    Blog Posts
+                  </h5>
+                  <h2 class="card-text" id="statBlogCount">0</h2>
+                  <p class="card-text" style="margin-bottom: 0">Total posts</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card" style="margin-bottom: 20px">
+                <div class="card-body">
+                  <h5 class="card-title" style="margin-bottom: 10px">Events</h5>
+                  <h2 class="card-text" id="statEventCount">0</h2>
+                  <p class="card-text" style="margin-bottom: 0">Total events</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="card" style="margin-bottom: 20px">
+                <div class="card-body">
+                  <h5 class="card-title" style="margin-bottom: 10px">
+                    Session
+                  </h5>
+                  <p class="card-text" style="margin-bottom: 6px">
+                    Signed in as: <strong id="statUsername">Admin</strong>
+                  </p>
+                  <p class="card-text" style="margin-bottom: 0">
+                    Last login: <strong id="statLastLogin">—</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-tabs" id="adminTab" role="tablist">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                id="blog-tab"
+                data-toggle="tab"
+                href="#blog"
+                role="tab"
+                aria-controls="blog"
+                aria-selected="true"
+                >Blog Posts</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                id="events-tab"
+                data-toggle="tab"
+                href="#events"
+                role="tab"
+                aria-controls="events"
+                aria-selected="false"
+                >Events</a
+              >
+            </li>
+          </ul>
+
+          <div
+            class="tab-content"
+            id="adminTabContent"
+            style="padding-top: 20px"
+          >
+            <!-- Blog Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="blog"
+              role="tabpanel"
+              aria-labelledby="blog-tab"
+            >
+              <div class="row clearfix" style="margin-bottom: 10px">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                  <h3 style="margin-bottom: 0">Manage Blog Posts</h3>
+                </div>
+                <div
+                  class="col-lg-4 col-md-4 col-sm-12"
+                  style="text-align: right"
+                >
+                  <button
+                    class="theme-btn btn-one"
+                    type="button"
+                    id="newBlogBtn"
+                    data-toggle="modal"
+                    data-target="#blogModal"
+                  >
+                    + New Post
+                  </button>
+                </div>
+              </div>
+
+              <div class="row clearfix" style="margin-bottom: 15px">
+                <div
+                  class="col-lg-4 col-md-6 col-sm-12"
+                  style="margin-bottom: 10px"
+                >
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-search"></i
+                      ></span>
+                    </div>
+                    <input
+                      id="blogSearch"
+                      type="text"
+                      class="form-control"
+                      placeholder="Search posts (title/author)…"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="col-lg-2 col-md-3 col-sm-6"
+                  style="margin-bottom: 10px"
+                >
+                  <select id="blogFilterStatus" class="form-control">
+                    <option value="all">All Status</option>
+                    <option value="published">Published</option>
+                    <option value="draft">Draft</option>
+                  </select>
+                </div>
+                <div
+                  class="col-lg-3 col-md-3 col-sm-6"
+                  style="margin-bottom: 10px"
+                >
+                  <select id="blogSort" class="form-control">
+                    <option value="updated_desc">Newest Updated</option>
+                    <option value="updated_asc">Oldest Updated</option>
+                    <option value="title_asc">Title A–Z</option>
+                    <option value="title_desc">Title Z–A</option>
+                  </select>
+                </div>
+                <div
+                  class="col-lg-3 col-md-12 col-sm-12"
+                  style="text-align: right; margin-bottom: 10px"
+                >
+                  <button
+                    type="button"
+                    id="exportDataBtn"
+                    class="btn btn-outline-primary btn-sm"
+                    style="margin-right: 6px"
+                  >
+                    <i class="fas fa-download"></i> Export
+                  </button>
+                  <button
+                    type="button"
+                    id="importDataBtn"
+                    class="btn btn-outline-secondary btn-sm"
+                    style="margin-right: 6px"
+                  >
+                    <i class="fas fa-upload"></i> Import
+                  </button>
+                  <button
+                    type="button"
+                    id="resetDataBtn"
+                    class="btn btn-outline-danger btn-sm"
+                  >
+                    <i class="fas fa-trash"></i> Reset
+                  </button>
+                  <input
+                    id="importFileInput"
+                    type="file"
+                    accept="application/json"
+                    style="display: none"
+                  />
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 52px">#</th>
+                      <th>Title</th>
+                      <th>Status</th>
+                      <th>Date</th>
+                      <th style="width: 160px">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="blogTableBody"></tbody>
+                </table>
+              </div>
+              <div id="blogEmpty" style="display: none">
+                <p style="margin-top: 10px">
+                  No blog posts yet. Click <strong>New Post</strong> to create
+                  one.
+                </p>
+              </div>
+            </div>
+
+            <!-- Events Tab -->
+            <div
+              class="tab-pane fade"
+              id="events"
+              role="tabpanel"
+              aria-labelledby="events-tab"
+            >
+              <div class="row clearfix" style="margin-bottom: 10px">
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                  <h3 style="margin-bottom: 0">Manage Events</h3>
+                </div>
+                <div
+                  class="col-lg-4 col-md-4 col-sm-12"
+                  style="text-align: right"
+                >
+                  <button
+                    class="theme-btn btn-one"
+                    type="button"
+                    id="newEventBtn"
+                    data-toggle="modal"
+                    data-target="#eventModal"
+                  >
+                    + New Event
+                  </button>
+                </div>
+              </div>
+
+              <div class="row clearfix" style="margin-bottom: 15px">
+                <div
+                  class="col-lg-4 col-md-6 col-sm-12"
+                  style="margin-bottom: 10px"
+                >
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-search"></i
+                      ></span>
+                    </div>
+                    <input
+                      id="eventSearch"
+                      type="text"
+                      class="form-control"
+                      placeholder="Search events (title/location)…"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="col-lg-3 col-md-3 col-sm-6"
+                  style="margin-bottom: 10px"
+                >
+                  <select id="eventFilterStatus" class="form-control">
+                    <option value="all">All Status</option>
+                    <option value="scheduled">Scheduled</option>
+                    <option value="completed">Completed</option>
+                    <option value="cancelled">Cancelled</option>
+                  </select>
+                </div>
+                <div
+                  class="col-lg-3 col-md-3 col-sm-6"
+                  style="margin-bottom: 10px"
+                >
+                  <select id="eventSort" class="form-control">
+                    <option value="date_asc">Upcoming First</option>
+                    <option value="date_desc">Latest First</option>
+                    <option value="title_asc">Title A–Z</option>
+                    <option value="title_desc">Title Z–A</option>
+                  </select>
+                </div>
+                <div
+                  class="col-lg-2 col-md-3 col-sm-12"
+                  style="text-align: right; margin-bottom: 10px"
+                >
+                  <button
+                    type="button"
+                    id="clearEventFiltersBtn"
+                    class="btn btn-outline-secondary btn-sm"
+                  >
+                    Clear
+                  </button>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 52px">#</th>
+                      <th>Title</th>
+                      <th>Location</th>
+                      <th>Date/Time</th>
+                      <th>Status</th>
+                      <th style="width: 160px">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="eventTableBody"></tbody>
+                </table>
+              </div>
+              <div id="eventsEmpty" style="display: none">
+                <p style="margin-top: 10px">
+                  No events yet. Click <strong>New Event</strong> to create one.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row clearfix" style="margin-top: 25px">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="card" style="margin-bottom: 30px">
+                <div class="card-body">
+                  <div class="row clearfix" style="margin-bottom: 10px">
+                    <div class="col-md-8">
+                      <h4 style="margin-bottom: 0">Recent Activity</h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: right">
+                      <button
+                        type="button"
+                        id="clearActivityBtn"
+                        class="btn btn-outline-danger btn-sm"
+                      >
+                        Clear Activity
+                      </button>
+                    </div>
+                  </div>
+                  <div class="table-responsive">
+                    <table
+                      class="table table-bordered"
+                      style="margin-bottom: 0"
+                    >
+                      <thead>
+                        <tr>
+                          <th style="width: 220px">Time</th>
+                          <th style="width: 120px">Type</th>
+                          <th style="width: 140px">Action</th>
+                          <th>Item</th>
+                        </tr>
+                      </thead>
+                      <tbody id="activityTableBody"></tbody>
+                    </table>
+                  </div>
+                  <div
+                    id="activityEmpty"
+                    style="display: none; padding-top: 10px"
+                  >
+                    <p style="margin-bottom: 0">No activity yet.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Modal -->
+      <div
+        class="modal fade"
+        id="blogModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="blogModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="blogModalLabel">New Blog Post</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="blogForm">
+              <div class="modal-body">
+                <input type="hidden" id="blogId" />
+                <div class="row clearfix">
+                  <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Title *</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="blogTitle"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Status</label>
+                      <select class="form-control" id="blogStatus">
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row clearfix">
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Author</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="blogAuthor"
+                        placeholder="Admin"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input class="form-control" type="date" id="blogDate" />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Image URL</label>
+                      <input
+                        class="form-control"
+                        type="url"
+                        id="blogImage"
+                        placeholder="https://..."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Excerpt</label>
+                  <textarea
+                    class="form-control"
+                    id="blogExcerpt"
+                    rows="2"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <label>Content</label>
+                  <textarea
+                    class="form-control"
+                    id="blogContent"
+                    rows="6"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="theme-btn btn-one">
+                  Save Post
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Modal -->
+      <div
+        class="modal fade"
+        id="eventModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="eventModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eventModalLabel">New Event</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="eventForm">
+              <div class="modal-body">
+                <input type="hidden" id="eventId" />
+                <div class="row clearfix">
+                  <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Title *</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="eventTitle"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Status</label>
+                      <select class="form-control" id="eventStatus">
+                        <option value="scheduled">Scheduled</option>
+                        <option value="completed">Completed</option>
+                        <option value="cancelled">Cancelled</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row clearfix">
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Location</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="eventLocation"
+                        placeholder="City / Venue"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Date & Time</label>
+                      <input
+                        class="form-control"
+                        type="datetime-local"
+                        id="eventDateTime"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row clearfix">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="form-group">
+                      <label>Image URL</label>
+                      <input
+                        class="form-control"
+                        type="url"
+                        id="eventImage"
+                        placeholder="https://..."
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea
+                    class="form-control"
+                    id="eventDescription"
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="theme-btn btn-one">
+                  Save Event
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- main-footer -->
+      <section class="main-footer">
+        <div class="footer-bottom">
+          <div class="auto-container">
+            <div class="inner-box clearfix">
+              <div class="copyright pull-left">
+                <p>
+                  &copy; 2026 <a href="index.html">Pure Hearts</a> Admin
+                  Dashboard.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- main-footer end -->
+
+      <!-- scroll to top -->
+      <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="far fa-long-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+    <script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/text_animation.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var STORAGE_KEYS = {
+          session: "ph_admin_session",
+          blog: "ph_blog_posts",
+          events: "ph_events",
+          activity: "ph_admin_activity",
+        };
+
+        var UI_STATE = {
+          blogSearch: "",
+          blogStatus: "all",
+          blogSort: "updated_desc",
+          eventSearch: "",
+          eventStatus: "all",
+          eventSort: "date_asc",
+        };
+
+        function safeJsonParse(value, fallback) {
+          try {
+            return JSON.parse(value);
+          } catch (e) {
+            return fallback;
+          }
+        }
+
+        function nowIso() {
+          return new Date().toISOString();
+        }
+
+        function id() {
+          return (
+            "ph_" +
+            Date.now().toString(36) +
+            "_" +
+            Math.random().toString(36).slice(2, 9)
+          );
+        }
+
+        function formatDate(isoOrDateStr) {
+          if (!isoOrDateStr) return "—";
+          var d = new Date(isoOrDateStr);
+          if (isNaN(d.getTime())) return "—";
+          return d.toLocaleDateString();
+        }
+
+        function formatDateTime(isoOrDateStr) {
+          if (!isoOrDateStr) return "—";
+          var d = new Date(isoOrDateStr);
+          if (isNaN(d.getTime())) return "—";
+          return d.toLocaleString();
+        }
+
+        function showAlert(message, type) {
+          var el = document.getElementById("adminAlert");
+          if (!el) return;
+          el.className = "alert alert-" + (type || "success");
+          el.textContent = message;
+          el.style.display = "block";
+          window.clearTimeout(showAlert._t);
+          showAlert._t = window.setTimeout(function () {
+            el.style.display = "none";
+          }, 2800);
+        }
+
+        function escapeHtml(s) {
+          return String(s || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+        }
+
+        function loadActivity() {
+          return safeJsonParse(localStorage.getItem(STORAGE_KEYS.activity), []);
+        }
+
+        function saveActivity(items) {
+          localStorage.setItem(STORAGE_KEYS.activity, JSON.stringify(items));
+        }
+
+        function logActivity(type, action, label) {
+          var items = loadActivity();
+          items = Array.isArray(items) ? items : [];
+          items.unshift({
+            id: id(),
+            time: nowIso(),
+            type: type,
+            action: action,
+            label: label || "—",
+          });
+          items = items.slice(0, 50);
+          saveActivity(items);
+          renderActivity();
+        }
+
+        function getSession() {
+          var session = sessionStorage.getItem(STORAGE_KEYS.session);
+          if (session) return safeJsonParse(session, null);
+          var persisted = localStorage.getItem(STORAGE_KEYS.session);
+          return safeJsonParse(persisted, null);
+        }
+
+        function setSession(session, remember) {
+          var value = JSON.stringify(session);
+          sessionStorage.setItem(STORAGE_KEYS.session, value);
+          if (remember) {
+            localStorage.setItem(STORAGE_KEYS.session, value);
+          } else {
+            localStorage.removeItem(STORAGE_KEYS.session);
+          }
+        }
+
+        function clearSession() {
+          sessionStorage.removeItem(STORAGE_KEYS.session);
+          localStorage.removeItem(STORAGE_KEYS.session);
+        }
+
+        function loadBlogPosts() {
+          return safeJsonParse(localStorage.getItem(STORAGE_KEYS.blog), []);
+        }
+
+        function saveBlogPosts(posts) {
+          localStorage.setItem(STORAGE_KEYS.blog, JSON.stringify(posts));
+        }
+
+        function loadEvents() {
+          return safeJsonParse(localStorage.getItem(STORAGE_KEYS.events), []);
+        }
+
+        function saveEvents(events) {
+          localStorage.setItem(STORAGE_KEYS.events, JSON.stringify(events));
+        }
+
+        function seedIfEmpty() {
+          var posts = loadBlogPosts();
+          var events = loadEvents();
+
+          if (!Array.isArray(posts) || posts.length === 0) {
+            posts = [
+              {
+                id: id(),
+                title: "Welcome to the Admin Dashboard",
+                author: "Admin",
+                date: new Date().toISOString().slice(0, 10),
+                status: "published",
+                image: "",
+                excerpt: "This is a sample post. Edit or delete it anytime.",
+                content:
+                  "Use this dashboard to create and manage posts. This is frontend-only and stores data in your browser.",
+                createdAt: nowIso(),
+                updatedAt: nowIso(),
+              },
+            ];
+            saveBlogPosts(posts);
+          }
+
+          if (!Array.isArray(events) || events.length === 0) {
+            events = [
+              {
+                id: id(),
+                title: "Community Outreach",
+                location: "Main Hall",
+                dateTime: new Date(Date.now() + 86400000)
+                  .toISOString()
+                  .slice(0, 16),
+                status: "scheduled",
+                image: "",
+                description: "Sample event. Edit details and save.",
+                createdAt: nowIso(),
+                updatedAt: nowIso(),
+              },
+            ];
+            saveEvents(events);
+          }
+        }
+
+        function parseMaybeDate(value) {
+          if (!value) return null;
+          var d = new Date(value);
+          if (isNaN(d.getTime())) return null;
+          return d;
+        }
+
+        function normalizeText(s) {
+          return String(s || "").toLowerCase();
+        }
+
+        function setWelcome(name) {
+          var a = document.getElementById("adminWelcomeName");
+          var b = document.getElementById("adminWelcomeNameSticky");
+          if (a) a.textContent = name || "Not signed in";
+          if (b) b.textContent = name || "Not signed in";
+        }
+
+        function setView(isLoggedIn) {
+          var loginView = document.getElementById("adminLoginView");
+          var appView = document.getElementById("adminAppView");
+          var logoutBtn = document.getElementById("adminLogoutBtn");
+          if (loginView)
+            loginView.style.display = isLoggedIn ? "none" : "block";
+          if (appView) appView.style.display = isLoggedIn ? "block" : "none";
+          if (logoutBtn)
+            logoutBtn.style.display = isLoggedIn ? "inline-block" : "none";
+        }
+
+        function updateStats() {
+          var posts = loadBlogPosts();
+          var events = loadEvents();
+          var session = getSession();
+          var blogCountEl = document.getElementById("statBlogCount");
+          var eventCountEl = document.getElementById("statEventCount");
+          var usernameEl = document.getElementById("statUsername");
+          var lastLoginEl = document.getElementById("statLastLogin");
+
+          if (blogCountEl)
+            blogCountEl.textContent = Array.isArray(posts) ? posts.length : 0;
+          if (eventCountEl)
+            eventCountEl.textContent = Array.isArray(events)
+              ? events.length
+              : 0;
+          if (usernameEl)
+            usernameEl.textContent =
+              session && session.username ? session.username : "Admin";
+          if (lastLoginEl)
+            lastLoginEl.textContent =
+              session && session.lastLogin
+                ? formatDateTime(session.lastLogin)
+                : "—";
+        }
+
+        function renderActivity() {
+          var tbody = document.getElementById("activityTableBody");
+          var empty = document.getElementById("activityEmpty");
+          if (!tbody) return;
+
+          var items = loadActivity();
+          items = Array.isArray(items) ? items : [];
+          tbody.innerHTML = "";
+
+          if (items.length === 0) {
+            if (empty) empty.style.display = "block";
+            return;
+          }
+
+          if (empty) empty.style.display = "none";
+          items.forEach(function (it) {
+            var tr = document.createElement("tr");
+
+            var tdTime = document.createElement("td");
+            tdTime.textContent = formatDateTime(it.time);
+
+            var tdType = document.createElement("td");
+            tdType.textContent = (it.type || "").toUpperCase();
+
+            var tdAction = document.createElement("td");
+            tdAction.textContent = (it.action || "").toUpperCase();
+
+            var tdLabel = document.createElement("td");
+            tdLabel.textContent = it.label || "—";
+
+            tr.appendChild(tdTime);
+            tr.appendChild(tdType);
+            tr.appendChild(tdAction);
+            tr.appendChild(tdLabel);
+            tbody.appendChild(tr);
+          });
+        }
+
+        function renderBlog() {
+          var tbody = document.getElementById("blogTableBody");
+          var empty = document.getElementById("blogEmpty");
+          if (!tbody) return;
+
+          var posts = loadBlogPosts();
+          posts = Array.isArray(posts) ? posts : [];
+          tbody.innerHTML = "";
+
+          var filtered = posts.slice();
+          var q = normalizeText(UI_STATE.blogSearch);
+          if (q) {
+            filtered = filtered.filter(function (p) {
+              return (
+                normalizeText(p.title).indexOf(q) !== -1 ||
+                normalizeText(p.author).indexOf(q) !== -1
+              );
+            });
+          }
+          if (UI_STATE.blogStatus !== "all") {
+            filtered = filtered.filter(function (p) {
+              return (p.status || "draft") === UI_STATE.blogStatus;
+            });
+          }
+
+          var sortMode = UI_STATE.blogSort;
+          filtered.sort(function (a, b) {
+            if (sortMode === "title_asc") {
+              return normalizeText(a.title).localeCompare(
+                normalizeText(b.title)
+              );
+            }
+            if (sortMode === "title_desc") {
+              return normalizeText(b.title).localeCompare(
+                normalizeText(a.title)
+              );
+            }
+            var da = parseMaybeDate(a.updatedAt || a.createdAt || a.date);
+            var db = parseMaybeDate(b.updatedAt || b.createdAt || b.date);
+            var av = da ? da.getTime() : 0;
+            var bv = db ? db.getTime() : 0;
+            return sortMode === "updated_asc" ? av - bv : bv - av;
+          });
+
+          if (filtered.length === 0) {
+            if (empty) empty.style.display = "block";
+            return;
+          }
+
+          if (empty) empty.style.display = "none";
+          if (empty) empty.style.display = "none";
+          filtered.forEach(function (p, idx) {
+            var tr = document.createElement("tr");
+
+            var tdIndex = document.createElement("td");
+            tdIndex.textContent = String(idx + 1);
+
+            var tdTitle = document.createElement("td");
+            tdTitle.textContent = p.title || "(Untitled)";
+
+            var tdStatus = document.createElement("td");
+            var isPublished = (p.status || "draft") === "published";
+            tdStatus.innerHTML =
+              '<span class="badge badge-' +
+              (isPublished ? "success" : "secondary") +
+              '">' +
+              escapeHtml((p.status || "draft").toUpperCase()) +
+              "</span> " +
+              '<button type="button" class="btn btn-sm btn-outline-primary" data-action="toggle">' +
+              (isPublished ? "Unpublish" : "Publish") +
+              "</button>";
+
+            var tdDate = document.createElement("td");
+            tdDate.textContent = formatDate(
+              p.date || p.updatedAt || p.createdAt
+            );
+
+            var tdActions = document.createElement("td");
+            tdActions.innerHTML =
+              '<button type="button" class="btn btn-sm btn-primary" data-action="edit">Edit</button> ' +
+              '<button type="button" class="btn btn-sm btn-secondary" data-action="duplicate">Duplicate</button> ' +
+              '<button type="button" class="btn btn-sm btn-danger" data-action="delete">Delete</button>';
+
+            tdActions.addEventListener("click", function (e) {
+              var btn = e.target;
+              if (!btn || !btn.getAttribute) return;
+              var action = btn.getAttribute("data-action");
+              if (action === "edit") {
+                openBlogModal(p.id);
+              }
+              if (action === "duplicate") {
+                duplicateBlog(p.id);
+              }
+              if (action === "delete") {
+                deleteBlog(p.id);
+              }
+            });
+
+            tdStatus.addEventListener("click", function (e) {
+              var btn = e.target;
+              if (!btn || !btn.getAttribute) return;
+              var action = btn.getAttribute("data-action");
+              if (action === "toggle") {
+                toggleBlogStatus(p.id);
+              }
+            });
+
+            tr.appendChild(tdIndex);
+            tr.appendChild(tdTitle);
+            tr.appendChild(tdStatus);
+            tr.appendChild(tdDate);
+            tr.appendChild(tdActions);
+            tbody.appendChild(tr);
+          });
+        }
+
+        function renderEvents() {
+          var tbody = document.getElementById("eventTableBody");
+          var empty = document.getElementById("eventsEmpty");
+          if (!tbody) return;
+
+          var events = loadEvents();
+          events = Array.isArray(events) ? events : [];
+          tbody.innerHTML = "";
+
+          var filtered = events.slice();
+          var q = normalizeText(UI_STATE.eventSearch);
+          if (q) {
+            filtered = filtered.filter(function (ev) {
+              return (
+                normalizeText(ev.title).indexOf(q) !== -1 ||
+                normalizeText(ev.location).indexOf(q) !== -1
+              );
+            });
+          }
+          if (UI_STATE.eventStatus !== "all") {
+            filtered = filtered.filter(function (ev) {
+              return (ev.status || "scheduled") === UI_STATE.eventStatus;
+            });
+          }
+
+          var sortMode = UI_STATE.eventSort;
+          filtered.sort(function (a, b) {
+            if (sortMode === "title_asc") {
+              return normalizeText(a.title).localeCompare(
+                normalizeText(b.title)
+              );
+            }
+            if (sortMode === "title_desc") {
+              return normalizeText(b.title).localeCompare(
+                normalizeText(a.title)
+              );
+            }
+            var da = parseMaybeDate(a.dateTime || a.updatedAt || a.createdAt);
+            var db = parseMaybeDate(b.dateTime || b.updatedAt || b.createdAt);
+            var av = da ? da.getTime() : 0;
+            var bv = db ? db.getTime() : 0;
+            return sortMode === "date_desc" ? bv - av : av - bv;
+          });
+
+          if (filtered.length === 0) {
+            if (empty) empty.style.display = "block";
+            return;
+          }
+
+          if (empty) empty.style.display = "none";
+          if (empty) empty.style.display = "none";
+          filtered.forEach(function (ev, idx) {
+            var tr = document.createElement("tr");
+
+            var tdIndex = document.createElement("td");
+            tdIndex.textContent = String(idx + 1);
+
+            var tdTitle = document.createElement("td");
+            tdTitle.textContent = ev.title || "(Untitled)";
+
+            var tdLoc = document.createElement("td");
+            tdLoc.textContent = ev.location || "—";
+
+            var tdDt = document.createElement("td");
+            tdDt.textContent = formatDateTime(ev.dateTime);
+
+            var tdStatus = document.createElement("td");
+            var st = ev.status || "scheduled";
+            var badge =
+              st === "completed"
+                ? "success"
+                : st === "cancelled"
+                ? "danger"
+                : "primary";
+            tdStatus.innerHTML =
+              '<span class="badge badge-' +
+              badge +
+              '">' +
+              escapeHtml(st.toUpperCase()) +
+              "</span> " +
+              (st === "scheduled"
+                ? '<button type="button" class="btn btn-sm btn-outline-success" data-action="complete">Mark Completed</button>'
+                : "");
+
+            var tdActions = document.createElement("td");
+            tdActions.innerHTML =
+              '<button type="button" class="btn btn-sm btn-primary" data-action="edit">Edit</button> ' +
+              '<button type="button" class="btn btn-sm btn-secondary" data-action="duplicate">Duplicate</button> ' +
+              '<button type="button" class="btn btn-sm btn-danger" data-action="delete">Delete</button>';
+
+            tdActions.addEventListener("click", function (e) {
+              var btn = e.target;
+              if (!btn || !btn.getAttribute) return;
+              var action = btn.getAttribute("data-action");
+              if (action === "edit") {
+                openEventModal(ev.id);
+              }
+              if (action === "duplicate") {
+                duplicateEvent(ev.id);
+              }
+              if (action === "delete") {
+                deleteEvent(ev.id);
+              }
+            });
+
+            tdStatus.addEventListener("click", function (e) {
+              var btn = e.target;
+              if (!btn || !btn.getAttribute) return;
+              var action = btn.getAttribute("data-action");
+              if (action === "complete") {
+                markEventCompleted(ev.id);
+              }
+            });
+
+            tr.appendChild(tdIndex);
+            tr.appendChild(tdTitle);
+            tr.appendChild(tdLoc);
+            tr.appendChild(tdDt);
+            tr.appendChild(tdStatus);
+            tr.appendChild(tdActions);
+            tbody.appendChild(tr);
+          });
+        }
+
+        function openBlogModal(blogId) {
+          var posts = loadBlogPosts();
+          posts = Array.isArray(posts) ? posts : [];
+          var p = blogId
+            ? posts.find(function (x) {
+                return x.id === blogId;
+              })
+            : null;
+
+          document.getElementById("blogId").value = p ? p.id : "";
+          document.getElementById("blogTitle").value = p ? p.title || "" : "";
+          document.getElementById("blogStatus").value = p
+            ? p.status || "draft"
+            : "draft";
+          document.getElementById("blogAuthor").value = p ? p.author || "" : "";
+          document.getElementById("blogDate").value = p ? p.date || "" : "";
+          document.getElementById("blogImage").value = p ? p.image || "" : "";
+          document.getElementById("blogExcerpt").value = p
+            ? p.excerpt || ""
+            : "";
+          document.getElementById("blogContent").value = p
+            ? p.content || ""
+            : "";
+
+          document.getElementById("blogModalLabel").textContent = p
+            ? "Edit Blog Post"
+            : "New Blog Post";
+        }
+
+        function openEventModal(eventId) {
+          var events = loadEvents();
+          events = Array.isArray(events) ? events : [];
+          var ev = eventId
+            ? events.find(function (x) {
+                return x.id === eventId;
+              })
+            : null;
+
+          document.getElementById("eventId").value = ev ? ev.id : "";
+          document.getElementById("eventTitle").value = ev
+            ? ev.title || ""
+            : "";
+          document.getElementById("eventStatus").value = ev
+            ? ev.status || "scheduled"
+            : "scheduled";
+          document.getElementById("eventLocation").value = ev
+            ? ev.location || ""
+            : "";
+          document.getElementById("eventDateTime").value = ev
+            ? ev.dateTime || ""
+            : "";
+          document.getElementById("eventImage").value = ev
+            ? ev.image || ""
+            : "";
+          document.getElementById("eventDescription").value = ev
+            ? ev.description || ""
+            : "";
+
+          document.getElementById("eventModalLabel").textContent = ev
+            ? "Edit Event"
+            : "New Event";
+        }
+
+        function deleteBlog(blogId) {
+          if (!confirm("Delete this blog post?")) return;
+          var posts = loadBlogPosts();
+          posts = Array.isArray(posts) ? posts : [];
+          var removed = posts.find(function (p) {
+            return p.id === blogId;
+          });
+          posts = posts.filter(function (p) {
+            return p.id !== blogId;
+          });
+          saveBlogPosts(posts);
+          renderBlog();
+          updateStats();
+          logActivity("blog", "delete", removed ? removed.title : "Blog post");
+          showAlert("Blog post deleted.", "warning");
+        }
+
+        function deleteEvent(eventId) {
+          if (!confirm("Delete this event?")) return;
+          var events = loadEvents();
+          events = Array.isArray(events) ? events : [];
+          var removed = events.find(function (ev) {
+            return ev.id === eventId;
+          });
+          events = events.filter(function (ev) {
+            return ev.id !== eventId;
+          });
+          saveEvents(events);
+          renderEvents();
+          updateStats();
+          logActivity("event", "delete", removed ? removed.title : "Event");
+          showAlert("Event deleted.", "warning");
+        }
+
+        function toggleBlogStatus(blogId) {
+          var posts = loadBlogPosts();
+          posts = Array.isArray(posts) ? posts : [];
+          var p = posts.find(function (x) {
+            return x.id === blogId;
+          });
+          if (!p) return;
+          p.status =
+            (p.status || "draft") === "published" ? "draft" : "published";
+          p.updatedAt = nowIso();
+          saveBlogPosts(posts);
+          renderBlog();
+          updateStats();
+          logActivity("blog", "status", p.title + " → " + p.status);
+          showAlert("Status updated.", "success");
+        }
+
+        function markEventCompleted(eventId) {
+          var events = loadEvents();
+          events = Array.isArray(events) ? events : [];
+          var ev = events.find(function (x) {
+            return x.id === eventId;
+          });
+          if (!ev) return;
+          ev.status = "completed";
+          ev.updatedAt = nowIso();
+          saveEvents(events);
+          renderEvents();
+          updateStats();
+          logActivity("event", "status", ev.title + " → completed");
+          showAlert("Event marked completed.", "success");
+        }
+
+        function duplicateBlog(blogId) {
+          var posts = loadBlogPosts();
+          posts = Array.isArray(posts) ? posts : [];
+          var p = posts.find(function (x) {
+            return x.id === blogId;
+          });
+          if (!p) return;
+          posts.push({
+            id: id(),
+            title: (p.title || "Untitled") + " (Copy)",
+            status: "draft",
+            author: p.author || "",
+            date: p.date || "",
+            image: p.image || "",
+            excerpt: p.excerpt || "",
+            content: p.content || "",
+            createdAt: nowIso(),
+            updatedAt: nowIso(),
+          });
+          saveBlogPosts(posts);
+          renderBlog();
+          updateStats();
+          logActivity("blog", "duplicate", p.title);
+          showAlert("Post duplicated (saved as draft).", "success");
+        }
+
+        function duplicateEvent(eventId) {
+          var events = loadEvents();
+          events = Array.isArray(events) ? events : [];
+          var ev = events.find(function (x) {
+            return x.id === eventId;
+          });
+          if (!ev) return;
+          events.push({
+            id: id(),
+            title: (ev.title || "Untitled") + " (Copy)",
+            status: "scheduled",
+            location: ev.location || "",
+            dateTime: ev.dateTime || "",
+            image: ev.image || "",
+            description: ev.description || "",
+            createdAt: nowIso(),
+            updatedAt: nowIso(),
+          });
+          saveEvents(events);
+          renderEvents();
+          updateStats();
+          logActivity("event", "duplicate", ev.title);
+          showAlert("Event duplicated.", "success");
+        }
+
+        function exportData() {
+          var payload = {
+            version: 1,
+            exportedAt: nowIso(),
+            blog: loadBlogPosts(),
+            events: loadEvents(),
+          };
+          var blob = new Blob([JSON.stringify(payload, null, 2)], {
+            type: "application/json;charset=utf-8",
+          });
+          var url = URL.createObjectURL(blob);
+          var a = document.createElement("a");
+          a.href = url;
+          a.download = "purehearts-admin-backup.json";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+          logActivity("system", "export", "Data exported");
+          showAlert("Export complete.", "success");
+        }
+
+        function importDataFromJson(jsonText) {
+          var data = safeJsonParse(jsonText, null);
+          if (!data || typeof data !== "object") {
+            showAlert("Invalid JSON file.", "danger");
+            return;
+          }
+
+          var incomingPosts = Array.isArray(data.blog) ? data.blog : [];
+          var incomingEvents = Array.isArray(data.events) ? data.events : [];
+
+          var replace = confirm(
+            "Import mode: OK = Replace existing data, Cancel = Merge with existing"
+          );
+
+          if (replace) {
+            saveBlogPosts(incomingPosts);
+            saveEvents(incomingEvents);
+            saveActivity([]);
+            logActivity("system", "import", "Replaced data from backup");
+          } else {
+            var posts = loadBlogPosts();
+            var events = loadEvents();
+            posts = Array.isArray(posts) ? posts : [];
+            events = Array.isArray(events) ? events : [];
+
+            var existingPostIds = {};
+            posts.forEach(function (p) {
+              existingPostIds[p.id] = true;
+            });
+            incomingPosts.forEach(function (p) {
+              var copy = Object.assign({}, p);
+              if (!copy.id || existingPostIds[copy.id]) copy.id = id();
+              copy.updatedAt = nowIso();
+              posts.push(copy);
+            });
+            saveBlogPosts(posts);
+
+            var existingEventIds = {};
+            events.forEach(function (ev) {
+              existingEventIds[ev.id] = true;
+            });
+            incomingEvents.forEach(function (ev) {
+              var copy = Object.assign({}, ev);
+              if (!copy.id || existingEventIds[copy.id]) copy.id = id();
+              copy.updatedAt = nowIso();
+              events.push(copy);
+            });
+            saveEvents(events);
+            logActivity("system", "import", "Merged data from backup");
+          }
+
+          renderBlog();
+          renderEvents();
+          updateStats();
+          renderActivity();
+          showAlert("Import complete.", "success");
+        }
+
+        function resetAllData() {
+          if (
+            !confirm(
+              "This will delete ALL blog posts, events, and activity on this device. Continue?"
+            )
+          )
+            return;
+          localStorage.removeItem(STORAGE_KEYS.blog);
+          localStorage.removeItem(STORAGE_KEYS.events);
+          localStorage.removeItem(STORAGE_KEYS.activity);
+          seedIfEmpty();
+          renderBlog();
+          renderEvents();
+          updateStats();
+          renderActivity();
+          logActivity("system", "reset", "Reset all data");
+          showAlert("Data reset complete.", "warning");
+        }
+
+        function attachHandlers() {
+          var loginForm = document.getElementById("adminLoginForm");
+          var logoutBtn = document.getElementById("adminLogoutBtn");
+          var blogForm = document.getElementById("blogForm");
+          var eventForm = document.getElementById("eventForm");
+          var newBlogBtn = document.getElementById("newBlogBtn");
+          var newEventBtn = document.getElementById("newEventBtn");
+
+          var blogSearch = document.getElementById("blogSearch");
+          var blogFilterStatus = document.getElementById("blogFilterStatus");
+          var blogSort = document.getElementById("blogSort");
+          var eventSearch = document.getElementById("eventSearch");
+          var eventFilterStatus = document.getElementById("eventFilterStatus");
+          var eventSort = document.getElementById("eventSort");
+          var clearEventFiltersBtn = document.getElementById(
+            "clearEventFiltersBtn"
+          );
+
+          var exportBtn = document.getElementById("exportDataBtn");
+          var importBtn = document.getElementById("importDataBtn");
+          var resetBtn = document.getElementById("resetDataBtn");
+          var importInput = document.getElementById("importFileInput");
+          var clearActivityBtn = document.getElementById("clearActivityBtn");
+
+          if (newBlogBtn) {
+            newBlogBtn.addEventListener("click", function () {
+              openBlogModal(null);
+            });
+          }
+          if (newEventBtn) {
+            newEventBtn.addEventListener("click", function () {
+              openEventModal(null);
+            });
+          }
+
+          if (blogSearch) {
+            blogSearch.addEventListener("input", function () {
+              UI_STATE.blogSearch = blogSearch.value || "";
+              renderBlog();
+            });
+          }
+          if (blogFilterStatus) {
+            blogFilterStatus.addEventListener("change", function () {
+              UI_STATE.blogStatus = blogFilterStatus.value || "all";
+              renderBlog();
+            });
+          }
+          if (blogSort) {
+            blogSort.addEventListener("change", function () {
+              UI_STATE.blogSort = blogSort.value || "updated_desc";
+              renderBlog();
+            });
+          }
+
+          if (eventSearch) {
+            eventSearch.addEventListener("input", function () {
+              UI_STATE.eventSearch = eventSearch.value || "";
+              renderEvents();
+            });
+          }
+          if (eventFilterStatus) {
+            eventFilterStatus.addEventListener("change", function () {
+              UI_STATE.eventStatus = eventFilterStatus.value || "all";
+              renderEvents();
+            });
+          }
+          if (eventSort) {
+            eventSort.addEventListener("change", function () {
+              UI_STATE.eventSort = eventSort.value || "date_asc";
+              renderEvents();
+            });
+          }
+          if (clearEventFiltersBtn) {
+            clearEventFiltersBtn.addEventListener("click", function () {
+              UI_STATE.eventSearch = "";
+              UI_STATE.eventStatus = "all";
+              UI_STATE.eventSort = "date_asc";
+              if (eventSearch) eventSearch.value = "";
+              if (eventFilterStatus) eventFilterStatus.value = "all";
+              if (eventSort) eventSort.value = "date_asc";
+              renderEvents();
+            });
+          }
+
+          if (exportBtn) {
+            exportBtn.addEventListener("click", exportData);
+          }
+          if (importBtn && importInput) {
+            importBtn.addEventListener("click", function () {
+              importInput.value = "";
+              importInput.click();
+            });
+            importInput.addEventListener("change", function () {
+              var file = importInput.files && importInput.files[0];
+              if (!file) return;
+              var reader = new FileReader();
+              reader.onload = function () {
+                importDataFromJson(String(reader.result || ""));
+              };
+              reader.readAsText(file);
+            });
+          }
+          if (resetBtn) {
+            resetBtn.addEventListener("click", resetAllData);
+          }
+
+          if (clearActivityBtn) {
+            clearActivityBtn.addEventListener("click", function () {
+              if (!confirm("Clear activity log?")) return;
+              saveActivity([]);
+              renderActivity();
+              logActivity("system", "activity", "Cleared activity log");
+              showAlert("Activity cleared.", "info");
+            });
+          }
+
+          if (loginForm) {
+            loginForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+              var username = (
+                document.getElementById("adminUsername").value || ""
+              ).trim();
+              var password = (
+                document.getElementById("adminPassword").value || ""
+              ).trim();
+              var remember =
+                !!document.getElementById("adminRememberMe").checked;
+
+              if (!username || !password) {
+                showAlert("Please enter username and password.", "danger");
+                return;
+              }
+
+              var session = {
+                username: username,
+                lastLogin: nowIso(),
+              };
+              setSession(session, remember);
+              setWelcome(username);
+              setView(true);
+              seedIfEmpty();
+              renderBlog();
+              renderEvents();
+              updateStats();
+              renderActivity();
+              logActivity("system", "login", username);
+              showAlert("Welcome back, " + username + "!", "success");
+            });
+          }
+
+          if (logoutBtn) {
+            logoutBtn.addEventListener("click", function () {
+              clearSession();
+              setWelcome(null);
+              setView(false);
+              logActivity("system", "logout", "Signed out");
+              showAlert("Logged out.", "info");
+            });
+          }
+
+          if (blogForm) {
+            blogForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+              var posts = loadBlogPosts();
+              posts = Array.isArray(posts) ? posts : [];
+              var blogId = document.getElementById("blogId").value;
+
+              var title = (
+                document.getElementById("blogTitle").value || ""
+              ).trim();
+              var status = document.getElementById("blogStatus").value;
+              var author = (
+                document.getElementById("blogAuthor").value || ""
+              ).trim();
+              var date = document.getElementById("blogDate").value;
+              var image = (
+                document.getElementById("blogImage").value || ""
+              ).trim();
+              var excerpt = (
+                document.getElementById("blogExcerpt").value || ""
+              ).trim();
+              var content = (
+                document.getElementById("blogContent").value || ""
+              ).trim();
+
+              if (!title) {
+                showAlert("Title is required.", "danger");
+                return;
+              }
+
+              var existing = blogId
+                ? posts.find(function (p) {
+                    return p.id === blogId;
+                  })
+                : null;
+              if (existing) {
+                existing.title = title;
+                existing.status = status;
+                existing.author = author;
+                existing.date = date;
+                existing.image = image;
+                existing.excerpt = excerpt;
+                existing.content = content;
+                existing.updatedAt = nowIso();
+                saveBlogPosts(posts);
+                logActivity("blog", "update", title);
+                showAlert("Blog post updated.", "success");
+              } else {
+                posts.push({
+                  id: id(),
+                  title: title,
+                  status: status,
+                  author: author,
+                  date: date,
+                  image: image,
+                  excerpt: excerpt,
+                  content: content,
+                  createdAt: nowIso(),
+                  updatedAt: nowIso(),
+                });
+                saveBlogPosts(posts);
+                logActivity("blog", "create", title);
+                showAlert("Blog post created.", "success");
+              }
+
+              $("#blogModal").modal("hide");
+              renderBlog();
+              updateStats();
+            });
+          }
+
+          if (eventForm) {
+            eventForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+              var events = loadEvents();
+              events = Array.isArray(events) ? events : [];
+              var eventId = document.getElementById("eventId").value;
+
+              var title = (
+                document.getElementById("eventTitle").value || ""
+              ).trim();
+              var status = document.getElementById("eventStatus").value;
+              var location = (
+                document.getElementById("eventLocation").value || ""
+              ).trim();
+              var dateTime = document.getElementById("eventDateTime").value;
+              var image = (
+                document.getElementById("eventImage").value || ""
+              ).trim();
+              var description = (
+                document.getElementById("eventDescription").value || ""
+              ).trim();
+
+              if (!title) {
+                showAlert("Title is required.", "danger");
+                return;
+              }
+
+              var existing = eventId
+                ? events.find(function (ev) {
+                    return ev.id === eventId;
+                  })
+                : null;
+              if (existing) {
+                existing.title = title;
+                existing.status = status;
+                existing.location = location;
+                existing.dateTime = dateTime;
+                existing.image = image;
+                existing.description = description;
+                existing.updatedAt = nowIso();
+                saveEvents(events);
+                logActivity("event", "update", title);
+                showAlert("Event updated.", "success");
+              } else {
+                events.push({
+                  id: id(),
+                  title: title,
+                  status: status,
+                  location: location,
+                  dateTime: dateTime,
+                  image: image,
+                  description: description,
+                  createdAt: nowIso(),
+                  updatedAt: nowIso(),
+                });
+                saveEvents(events);
+                logActivity("event", "create", title);
+                showAlert("Event created.", "success");
+              }
+
+              $("#eventModal").modal("hide");
+              renderEvents();
+              updateStats();
+            });
+          }
+        }
+
+        function boot() {
+          attachHandlers();
+
+          var session = getSession();
+          if (session && session.username) {
+            setWelcome(session.username);
+            setView(true);
+            seedIfEmpty();
+            renderBlog();
+            renderEvents();
+            updateStats();
+            renderActivity();
+          } else {
+            setWelcome(null);
+            setView(false);
+          }
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", boot);
+        } else {
+          boot();
+        }
+
+        // Ensure modals are populated when opened from action buttons
+        $("#blogModal").on("show.bs.modal", function () {
+          var current = document.getElementById("blogId").value;
+          if (!current) {
+            openBlogModal(null);
+          }
+        });
+
+        $("#eventModal").on("show.bs.modal", function () {
+          var current = document.getElementById("eventId").value;
+          if (!current) {
+            openEventModal(null);
+          }
+        });
+      })();
+    </script>
+  </body>
+  <!-- End of .page_wrapper -->
+</html>
