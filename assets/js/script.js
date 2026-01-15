@@ -5,7 +5,7 @@
 	//Hide Loading Box (Preloader)
 	function handlePreloader() {
 		if($('.loader-wrap').length){
-			$('.loader-wrap').delay(1000).fadeOut(500);
+			$('.loader-wrap').delay(500).fadeOut(200);
 		}
 	}
 
@@ -30,8 +30,72 @@
 			}
 		}
 	}
+
+	function initSearchDropdownFallback() {
+		if ($.fn.dropdown) {
+			return;
+		}
+
+		$(document).on('click', '.main-header .search-box-btn', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			var $dropdown = $(this).closest('.dropdown');
+			var isOpen = $dropdown.hasClass('show');
+
+			$('.main-header .search-box-outer .dropdown')
+				.removeClass('show')
+				.find('.dropdown-menu')
+				.removeClass('show');
+
+			if (!isOpen) {
+				$dropdown.addClass('show');
+				$dropdown.find('.dropdown-menu').addClass('show');
+				$(this).attr('aria-expanded', 'true');
+			} else {
+				$(this).attr('aria-expanded', 'false');
+			}
+		});
+
+		$(document).on('click', function() {
+			$('.main-header .search-box-outer .dropdown')
+				.removeClass('show')
+				.find('.dropdown-menu')
+				.removeClass('show');
+		});
+
+		$(document).on('click', '.main-header .search-panel', function(e) {
+			e.stopPropagation();
+		});
+	}
+
+	function setActiveNavItem() {
+		var current = window.location.pathname.split('/').pop();
+		if (!current) {
+			current = 'index.html';
+		}
+		current = current.split('?')[0].split('#')[0];
+
+		var $navItems = $('.main-menu .navigation > li');
+		$navItems.removeClass('current');
+
+		$navItems.each(function() {
+			var $link = $(this).children('a');
+			if ($link.length && $link.attr('href') === current) {
+				$(this).addClass('current');
+			}
+		});
+
+		$('.main-menu .navigation li.dropdown li a').each(function() {
+			var $link = $(this);
+			if ($link.attr('href') === current) {
+				$link.closest('li.dropdown').addClass('current');
+			}
+		});
+	}
 	
 	headerStyle();
+	initSearchDropdownFallback();
 
 
 	//Submenu Dropdown Toggle
@@ -261,27 +325,27 @@
     // single-item-carousel
 	if ($('.single-item-carousel').length) {
 		$('.single-item-carousel').owlCarousel({
-			loop:true,
+			loop:false,
 			margin:30,
 			nav:true,
 			smartSpeed: 500,
-			autoplay: 1000,
+			autoplay: false,
 			navText: [ '<span class="far fa-arrow-left"></span>', '<span class="far fa-arrow-right"></span>' ],
 			responsive:{
 				0:{
 					items:1
 				},
 				480:{
-					items:1
+					items:2
 				},
 				600:{
-					items:1
+					items:2
 				},
 				800:{
-					items:1
+					items:3
 				},
 				1024:{
-					items:1
+					items:4
 				}
 			}
 		});    		
@@ -560,9 +624,13 @@
 			// Needed variables
 			var $container=$('.sortable-masonry .items-container');
 			var $filter=$('.filter-btns');
+			var initialFilter = '*';
+			if($filter.find('li.active').length){
+				initialFilter = $filter.find('li.active').attr('data-filter');
+			}
 	
 			$container.isotope({
-				filter:'*',
+				filter: initialFilter,
 				 masonry: {
 					columnWidth : '.masonry-item.small-column'
 				 },
@@ -781,6 +849,7 @@
 		enableMasonry();
 		expertizeRoundCircle();
 		setupAboutVideoAutoplay();
+		setActiveNavItem();
 	});
 
 	
