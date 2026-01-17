@@ -628,6 +628,11 @@
 			if($filter.find('li.active').length){
 				initialFilter = $filter.find('li.active').attr('data-filter');
 			}
+			if (window.location.hash === '#president-vision') {
+				initialFilter = '.president';
+				$filter.find('li').removeClass('active');
+				$filter.find('li[data-filter=".president"]').addClass('active');
+			}
 	
 			$container.isotope({
 				filter: initialFilter,
@@ -635,10 +640,19 @@
 					columnWidth : '.masonry-item.small-column'
 				 },
 				animationOptions:{
-					duration:500,
+					duration: initialFilter === '.president' ? 0 : 500,
 					easing:'linear'
 				}
 			});
+
+			var hash = window.location.hash;
+			if (hash === '#president-vision') {
+				var $presidentFilter = $filter.find('li[data-filter=".president"]');
+				if ($presidentFilter.length) {
+					$filter.find('li').removeClass('active');
+					$presidentFilter.addClass('active');
+				}
+			}
 			
 	
 			// Isotope Filter 
