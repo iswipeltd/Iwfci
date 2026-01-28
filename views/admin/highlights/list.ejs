@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <% include ../partials/navbar %>
+  <div class="container">
+    <% if (success) { %><div class="alert alert-success"><%= success %></div><% } %>
+    <% if (error) { %><div class="alert alert-error"><%= error %></div><% } %>
+    <div class="header">
+      <h1>Manage Highlights</h1>
+      <a href="/admin/highlights/create" class="btn">Add Highlight</a>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Title</th><th>Category</th><th>Metric</th><th>Order</th><th>Status</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        <% highlights.forEach(h => { %>
+          <tr>
+            <td><%= h.title %></td>
+            <td><%= h.category || 'N/A' %></td>
+            <td><%= h.metric || 'N/A' %></td>
+            <td><%= h.order %></td>
+            <td><span class="status <%= h.active ? 'active' : 'inactive' %>"><%= h.active ? 'Active' : 'Inactive' %></span></td>
+            <td>
+              <a href="/admin/highlights/edit/<%= h.id %>" class="btn">Edit</a>
+              <form action="/admin/highlights/delete/<%= h.id %>" method="POST" style="display:inline;" onsubmit="return confirm('Delete?');">
+                <button class="btn btn-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

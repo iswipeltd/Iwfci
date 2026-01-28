@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar h2 {
+      margin: 0;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    .navbar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    .btn-danger {
+      background: #dc3545;
+    }
+
+    .table-container {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f8f9fa;
+      font-weight: 600;
+      color: #333;
+    }
+
+    tr:hover {
+      background-color: #f8f9fa;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .status {
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .status-active {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    .status-inactive {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+
+    .alert {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .alert-error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
+    .no-data {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <h2>School Admin Panel</h2>
+    <div>
+      <span>Welcome, <%= username %></span>
+      <a href="/admin/dashboard">Dashboard</a>
+      <a href="/admin/hero-slides">Hero Slides</a>
+      <a href="/admin/highlights">Highlights</a>
+      <a href="/admin/board-members">Board</a>
+      <a href="/admin/events">Events</a>
+      <a href="/admin/blogs">Blogs</a>
+      <a href="/admin/contacts">Contacts</a>
+      <a href="/admin/logout">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <% if (success && success.length > 0) { %>
+      <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    
+    <% if (error && error.length > 0) { %>
+      <div class="alert alert-error"><%= error %></div>
+    <% } %>
+
+    <div class="header">
+      <h1>Manage Hero Carousel</h1>
+      <a href="/admin/hero-slides/create" class="btn">Add New Slide</a>
+    </div>
+
+    <div class="table-container">
+      <% if (slides.length > 0) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Preview</th>
+              <th>Title</th>
+              <th>Subtitle</th>
+              <th>Order</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% slides.forEach(slide => { %>
+              <tr>
+                <td>
+                  <% if (slide.image) { %>
+                    <img src="<%= slide.image %>" alt="<%= slide.title %>" class="thumbnail" />
+                  <% } else { %>
+                    No image
+                  <% } %>
+                </td>
+                <td><%= slide.title %></td>
+                <td><%= slide.subtitle || 'N/A' %></td>
+                <td><%= slide.order %></td>
+                <td>
+                  <span class="status <%= slide.active ? 'status-active' : 'status-inactive' %>">
+                    <%= slide.active ? 'Active' : 'Inactive' %>
+                  </span>
+                </td>
+                <td class="actions">
+                  <a href="/admin/hero-slides/edit/<%= slide.id %>" class="btn">Edit</a>
+                  <form action="/admin/hero-slides/delete/<%= slide.id %>" method="POST" style="display: inline;" 
+                        onsubmit="return confirm('Are you sure you want to delete this hero slide?');">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <div class="no-data">
+          <p>No hero slides found. <a href="/admin/hero-slides/create">Create your first slide</a></p>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
